@@ -25,34 +25,35 @@
     font-size: 38px;
     color: #fff;
     vertical-align: middle;
-    position: relative;
-    z-index: 10;
     p{
       text-align: center;
+      position: relative;
+      z-index: 10;
       &::after{
         content: close-quote;
         display: block;
+        position: absolute;
+        top: 20px;
+        right: 0;
         width: 30px;
         height: 30px;
         border-radius: 50%;
         background: grey;
-        position: absolute;
-        bottom: 240px;
-        right: 150px;
       }
       &::before{
         content: open-quote;
         display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
         width: 30px;
         height: 30px;
         border-radius: 50%;
         background: grey;
-        position: absolute;
-        bottom: 240px;
-        left: 150px;
       }
     }
     .quote-author{
+      z-index: 15;
       font-size: 80%;
       font-style: italic;
       text-align: right;

@@ -41,6 +41,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: Muli, sans-serif;
   color: #40464f; }
@@ -89,32 +92,33 @@ h3 {
     padding: 150px;
     font-size: 38px;
     color: #fff;
-    vertical-align: middle;
-    position: relative;
-    z-index: 10; }
+    vertical-align: middle; }
     .img-background .img-text p {
-      text-align: center; }
+      text-align: center;
+      position: relative;
+      z-index: 10; }
       .img-background .img-text p::after {
         content: close-quote;
         display: block;
+        position: absolute;
+        top: 20px;
+        right: 0;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background: grey;
-        position: absolute;
-        bottom: 240px;
-        right: 150px; }
+        background: grey; }
       .img-background .img-text p::before {
         content: open-quote;
         display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background: grey;
-        position: absolute;
-        bottom: 240px;
-        left: 150px; }
+        background: grey; }
     .img-background .img-text .quote-author {
+      z-index: 15;
       font-size: 80%;
       font-style: italic;
       text-align: right; }
