@@ -1,0 +1,61 @@
+/**
+  Lesson 2 homework
+ */
+
+.img-background {
+  height: 400px;
+  width: 100%;
+  background: url('../img/desert.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+  position: relative;
+  &::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+  .img-text{
+    display: table-cell;
+    padding: 150px;
+    font-size: 38px;
+    color: #fff;
+    vertical-align: middle;
+    position: relative;
+    z-index: 10;
+    p{
+      text-align: center;
+      &::after{
+        content: close-quote;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: grey;
+        position: absolute;
+        bottom: 240px;
+        right: 150px;
+      }
+      &::before{
+        content: open-quote;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: grey;
+        position: absolute;
+        bottom: 240px;
+        left: 150px;
+      }
+    }
+    .quote-author{
+      font-size: 80%;
+      font-style: italic;
+      text-align: right;
+    }
+  }
+}

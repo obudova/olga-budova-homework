@@ -1,0 +1,122 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Muli, sans-serif;
+  color: #40464f; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 50px;
+  line-height: 1.28; }
+
+h2 {
+  width: 100%;
+  font-size: 35px;
+  color: #40464f; }
+
+h3 {
+  font-size: 26px;
+  color: #40464f; }
+
+.text-container {
+  margin: 30px 0; }
+
+/**
+  Lesson 2 homework
+ */
+.img-background {
+  height: 400px;
+  width: 100%;
+  background: url("../img/desert.jpeg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+  position: relative; }
+  .img-background::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .img-background .img-text {
+    display: table-cell;
+    padding: 150px;
+    font-size: 38px;
+    color: #fff;
+    vertical-align: middle;
+    position: relative;
+    z-index: 10; }
+    .img-background .img-text p {
+      text-align: center; }
+      .img-background .img-text p::after {
+        content: close-quote;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: grey;
+        position: absolute;
+        bottom: 240px;
+        right: 150px; }
+      .img-background .img-text p::before {
+        content: open-quote;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: grey;
+        position: absolute;
+        bottom: 240px;
+        left: 150px; }
+    .img-background .img-text .quote-author {
+      font-size: 80%;
+      font-style: italic;
+      text-align: right; }
+
+/*# sourceMappingURL=style.css.map */
