@@ -2,8 +2,11 @@ console.log($);
 $(function () {
     var deg = 0;
     var IntervalId = 0;
-    var IntervalId = 0;
+    var moveId = 0;
     var action = false;
+    var pixelCountX = 0;
+    var pixelCountY = 0;
+
     function rotateBox(deg) {
         $('.cube-container').css('transform', 'rotateX('+ deg + 'deg) ' +
             'rotateY(' + deg + 'deg)');
@@ -29,6 +32,7 @@ $(function () {
             if((deg-currentDeg)>=90){
                 clearInterval(IntervalId);
             }
+
         }, 10);
     }
     $('.btn.start').click(function () {
@@ -55,11 +59,30 @@ $(function () {
     });
 
     $('.btn.up').click(function () {
-        moveOnClick(rotateUp);
+       //moveOnClick(rotateUp);
+        //console.log($('.cube-container').css('transform','translateX()'));
+        var lastY = pixelCountY;
+        moveId = setInterval(function () {
+            pixelCountY--;
+            $('.cube-container').css('transform','translateY('+pixelCountY+'px)');
 
+            if(lastY-pixelCountY>=100){
+               clearInterval(moveId);
+            }
+            console.log(document.getElementById('cube-container').style('transform', 'translateX'));
+
+        })
     });
     $('.btn.down').click(function () {
-         moveOnClick(rotateDown);
+        var lastY = pixelCountY;
+        moveId = setInterval(function () {
+            pixelCountY++;
+            $('.cube-container').css('transform','translateY('+pixelCountY+'px)');
+
+            if(pixelCountY-lastY>=100){
+                clearInterval(moveId);
+            }
+        })
     });
     $('.btn.left').click(function () {
         moveOnClick(rotateLeft);
