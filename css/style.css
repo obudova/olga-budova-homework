@@ -74,19 +74,14 @@ h3 {
 .img-background {
   height: 400px;
   width: 100%;
-  background: url("../img/desert.jpeg") no-repeat;
-  background-position: center;
+  background: url("../img/desert.jpeg") no-repeat center;
   background-size: cover;
   display: table;
   position: relative; }
-  .img-background::after {
-    content: '';
+  .img-background .overlay {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0; }
+    background: rgba(0, 0, 0, 0.5); }
   .img-background .img-text {
     display: table-cell;
     padding: 150px;
@@ -95,8 +90,7 @@ h3 {
     vertical-align: middle; }
     .img-background .img-text p {
       text-align: center;
-      position: relative;
-      z-index: 10; }
+      position: relative; }
       .img-background .img-text p::after {
         content: close-quote;
         display: block;
@@ -118,19 +112,20 @@ h3 {
         border-radius: 50%;
         background: grey; }
     .img-background .img-text .quote-author {
-      z-index: 15;
       font-size: 80%;
       font-style: italic;
       text-align: right; }
 
 .cube-3d {
-  perspective: 2500px; }
+  perspective: 2500px;
+  perspective-origin: -600px -1000px;
+  height: 100%; }
   .cube-3d .cube-container {
     transform-style: preserve-3d;
     position: relative;
-    height: 300px;
-    width: 300px;
-    margin: 100px auto; }
+    height: 250px;
+    width: 250px;
+    margin: 300px auto; }
     .cube-3d .cube-container .side {
       position: absolute;
       top: 0;
@@ -139,22 +134,22 @@ h3 {
       width: 100%; }
       .cube-3d .cube-container .side.front {
         background: #1abc9c;
-        transform: translateZ(150px); }
+        transform: translateZ(125px); }
       .cube-3d .cube-container .side.back {
         background: #1abc9c;
-        transform: translateZ(-150px); }
+        transform: translateZ(-125px); }
       .cube-3d .cube-container .side.left {
         background: #3498db;
-        transform: translateX(-150px) rotateY(90deg); }
+        transform: translateX(-125px) rotateY(90deg); }
       .cube-3d .cube-container .side.right {
         background: #9b59b6;
-        transform: translateX(150px) rotateY(90deg); }
+        transform: translateX(125px) rotateY(90deg); }
       .cube-3d .cube-container .side.top {
         background: #e74c3c;
-        transform: translateY(-150px) rotateX(90deg); }
+        transform: translateY(-125px) rotateX(90deg); }
       .cube-3d .cube-container .side.bottom {
         background: #e74c3c;
-        transform: translateY(150px) rotateX(90deg); }
+        transform: translateY(125px) rotateX(90deg); }
   .cube-3d .btn {
     display: inline-block;
     background: #000;
@@ -163,11 +158,9 @@ h3 {
     color: #fff;
     font-size: 16px;
     cursor: pointer; }
-
-@keyframes moveUp {
-  0% {
-    transform: translateZ(-150px) rotateX(0deg); }
-  100% {
-    transform: translateZ(-150px) rotateX(90deg); } }
+  .cube-3d nav {
+    position: fixed;
+    bottom: 0;
+    left: 0; }
 
 /*# sourceMappingURL=style.css.map */
