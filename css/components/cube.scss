@@ -31,7 +31,7 @@ $half-side: $side-width/2;
         transform: translateX(-$half-side) rotateY(90deg);
       }
       &.right{
-        background: #9b59b6;
+        background: #3498db;
         transform: translateX($half-side) rotateY(90deg);
       }
       &.top{

@@ -25,3 +25,11 @@ h3{
 .text-container{
   margin: 30px 0;
 }
+.overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  top:0;
+  left:0;
+}
