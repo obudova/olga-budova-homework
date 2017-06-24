@@ -13,12 +13,14 @@
   .img-text{
     display: table-cell;
     padding: 150px;
-    font-size: 38px;
-    color: #fff;
     vertical-align: middle;
-    p{
+    color: #fff;
+    font-size: 38px;
+    p.quote{
       text-align: center;
       position: relative;
+      font-size: 38px;
+      color: #fff;
       &::after{
         content: close-quote;
         display: block;

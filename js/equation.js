@@ -16,36 +16,25 @@ document.getElementById('count').onclick=function (e) {
     var c = cInput.value;
     var p = document.createElement('p');
     p.id="answer";
-
-    if(defineDescriminant(a, b,c)<0){
+    var desc = defineDescriminant(a,b,c);
+    if(desc < 0){
         p.innerHTML= 'Нет корней';
         //console.log('Yea');
     }
-    else if(defineDescriminant(a, b, c)>0){
-        var x1 = (-b+Math.sqrt(defineDescriminant(a, b, c)))/(2*a);
-        var x2 = (-b-Math.sqrt(defineDescriminant(a, b, c)))/(2*a);
+    else if(desc > 0){
+        var x1 = (-b+Math.sqrt(desc))/(2*a);
+        var x2 = (-b-Math.sqrt(desc))/(2*a);
         var answer = "Первый корень: "+x1+"" +"\n Второй корень: "+x2;
         p.innerHTML=answer;
+    }else{
+        var x = -b/(2*a);
+        var answer = "Единственный корень: "+x;
+        p.innerHTML= answer;
     }
-    //console.log(form);
-    // [].forEach.call(form, function (val, ind) {
-
-        // console.log({}.call(form) );
-    // });
-    // [].forEach.call(form, function (val, ind) {
-    //     console.log(val.nextSibling);
-    //    if(val.nextSibling.nodeName=="#text"){
-    //
-    //    }else {
-    //
-    //    }
-    // });
-
     container.appendChild(p);
     console.log(p);
     console.log(container.lastChild);
-    //console.log(form.nextSibling);
-    //console.log(a);
+    
 };
 
 function defineDescriminant(a,b,c) {

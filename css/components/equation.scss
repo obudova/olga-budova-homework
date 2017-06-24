@@ -5,7 +5,50 @@
   h3{
     margin-bottom: 20px;
   }
-  input[type=numer]{
-    width: 10px;
+
+  input[type=number]{
+    width: 56px;
+    height: 38px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px #e3e7ee;
+    font-size: 16px;
+    color: #40464f;
+    text-align: center;
+
+    &[type=number]::-webkit-inner-spin-button,
+    &[type=number]::-webkit-outer-spin-button {
+        opacity: 1;
+    }
   }
+  form{
+    margin: 0 auto;
+    width: 500px;
+    padding: 30px;
+    border: 1px solid rgba(64, 70, 79, 0.35);
+    border-radius:5px ;
+
+    button{
+      cursor: pointer;
+      height: 48px;
+      border-radius: 100px;
+      border: solid 1px #e3e7ee;
+      padding:15px 30px;
+      background-color: #fff;
+      outline: none;
+      transition: all .3s ease;
+      &.btn-text{
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: #40464f;
+        text-transform: uppercase;
+      }
+      &:hover{
+        background-color: #e3e7ee;
+      }
+    }
+  }
+  
 }
