@@ -1,0 +1,17 @@
+$box-side: 200px;
+.moving-box{
+    .box-container{
+        height: 500px;
+        background-color: #ccc;
+        position: relative;
+        .box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: $box-side;
+            width:   $box-side;
+            background-color: #40464f;   
+            transition: all .3s ease-out;
+        }
+    }
+}
