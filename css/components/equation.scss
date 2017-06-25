@@ -28,27 +28,6 @@
     border: 1px solid rgba(64, 70, 79, 0.35);
     border-radius:5px ;
 
-    button{
-      cursor: pointer;
-      height: 48px;
-      border-radius: 100px;
-      border: solid 1px #e3e7ee;
-      padding:15px 30px;
-      background-color: #fff;
-      outline: none;
-      transition: all .3s ease;
-      &.btn-text{
-        font-size: 12px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-        text-align: center;
-        color: #40464f;
-        text-transform: uppercase;
-      }
-      &:hover{
-        background-color: #e3e7ee;
-      }
-    }
   }
   
 }

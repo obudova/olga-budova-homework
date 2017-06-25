@@ -9,7 +9,6 @@ document.getElementById('count').onclick=function (e) {
     var ans = document.getElementById("answer");
     if(ans){
         container.removeChild(ans);
-
     }
     var a = aInput.value;
     var b = bInput.value;
@@ -32,9 +31,6 @@ document.getElementById('count').onclick=function (e) {
         p.innerHTML= answer;
     }
     container.appendChild(p);
-    console.log(p);
-    console.log(container.lastChild);
-    
 };
 
 function defineDescriminant(a,b,c) {

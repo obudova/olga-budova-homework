@@ -391,6 +391,25 @@ p {
   line-height: 1.7;
   color: #000; }
 
+button {
+  cursor: pointer;
+  height: 48px;
+  border-radius: 100px;
+  border: solid 1px #e3e7ee;
+  padding: 15px 30px;
+  background-color: #fff;
+  outline: none;
+  transition: all .3s ease; }
+  button.btn-text {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #40464f;
+    text-transform: uppercase; }
+  button:hover {
+    background-color: #e3e7ee; }
+
 /**
   Lesson 2 homework
  */
@@ -505,23 +524,14 @@ p {
   padding: 30px;
   border: 1px solid rgba(64, 70, 79, 0.35);
   border-radius: 5px; }
-  .equation form button {
-    cursor: pointer;
-    height: 48px;
-    border-radius: 100px;
-    border: solid 1px #e3e7ee;
-    padding: 15px 30px;
-    background-color: #fff;
-    outline: none;
-    transition: all .3s ease; }
-    .equation form button.btn-text {
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      text-align: center;
-      color: #40464f;
-      text-transform: uppercase; }
-    .equation form button:hover {
-      background-color: #e3e7ee; }
+
+.table-container table {
+  margin-top: 30px;
+  border-collapse: collapse; }
+  .table-container table tr.dark {
+    background-color: rgba(198, 198, 198, 0.3); }
+  .table-container table td, .table-container table th {
+    padding: 15px 20px;
+    border: 1px solid rgba(198, 198, 198, 0.2); }
 
 /*# sourceMappingURL=style.css.map */
