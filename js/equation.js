@@ -2,7 +2,6 @@ var aInput = document.getElementById("a");
 var bInput = document.getElementById("b");
 var cInput = document.getElementById("c");
 var container = document.getElementById("equation");
-var form = document.getElementsByTagName('form');
 
 document.getElementById('count').onclick=function (e) {
     e.preventDefault();
@@ -27,25 +26,10 @@ document.getElementById('count').onclick=function (e) {
         var answer = "Первый корень: "+x1+"" +"\n Второй корень: "+x2;
         p.innerHTML=answer;
     }
-    //console.log(form);
-    // [].forEach.call(form, function (val, ind) {
 
-        // console.log({}.call(form) );
-    // });
-    // [].forEach.call(form, function (val, ind) {
-    //     console.log(val.nextSibling);
-    //    if(val.nextSibling.nodeName=="#text"){
-    //
-    //    }else {
-    //
-    //    }
-    // });
 
     container.appendChild(p);
-    console.log(p);
-    console.log(container.lastChild);
-    //console.log(form.nextSibling);
-    //console.log(a);
+
 };
 
 function defineDescriminant(a,b,c) {
