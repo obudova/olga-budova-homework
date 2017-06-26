@@ -1,0 +1,122 @@
+$blue: #42a5f5;
+.component-library{
+  background-color: #dee5e8;
+  color: #798ca7;
+  h3{
+    color: #798ca7;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #798ca7;
+    margin-bottom: 50px;
+  }
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-right: 30px;
+
+  .btn{
+    background-color: $blue;
+    padding: 12px  35px  12px 25px;
+    &:after{
+      content: "";
+      background: url("../img/icons/down-arrow.svg");
+      background-size: contain;
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      transition: all .3s ease-out;
+    }
+  }
+  ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    z-index: 1;
+    opacity: 0;
+    transition: all .3s ease-out;
+    width: 100%;
+    visibility: hidden;
+
+    &:after{
+      content: "";
+      height: 10px;
+      width: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      position: absolute;
+      top: -4px;
+      right: 15px;
+      transform: rotate(45deg);
+      z-index: 0;
+
+    }
+    li{
+      position: relative;
+      z-index: 1;
+      &:last-child a{
+        border-bottom: none;
+      }
+      a{
+        box-sizing: border-box;
+        display: block;
+        color: #798ca7;
+        padding: 14px 25px;
+        background-color: #fff;
+        border-bottom: 1px solid #dadada;
+
+        &:hover{
+          background-color: #eee;
+        }
+      }
+
+    }
+
+  }
+  &.show{
+    .btn:after{
+      transform: rotate(-180deg);
+    }
+    ul{
+      transform: translateY(10px);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &.second-type{
+    span{
+      background-color: #1abc9c;
+    }
+  }
+  &.third-type{
+    span{
+      background-color: #9aca40;
+    }
+  }
+}
+
+.accordion{
+  display: block;
+  width: 300px;
+  .item{
+
+    &__title{
+      padding: 10px 20px;
+      background-color: $blue;
+      color: #fff;
+      cursor: pointer;
+    }
+    &__content{
+      display: none;
+      background-color: #fff;
+      padding: 10px;
+      line-height: 170%;
+    }
+  }
+}

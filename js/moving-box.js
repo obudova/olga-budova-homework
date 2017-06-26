@@ -5,6 +5,7 @@ var screenWidth = $('.box-container').width();
 var screenHeight = $('.box-container').height();
 
 var boxWidth = $('.box-container .box').width();
+
 var boxHeight = $('.box-container .box').height();
 
 $('#move-box-up').click(function (){
