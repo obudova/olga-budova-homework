@@ -124,13 +124,17 @@ h3 {
       text-align: right; }
 
 .cube-3d {
-  perspective: 2500px; }
+  perspective: 2500px;
+  perspective-origin: -600px -1000px; }
   .cube-3d .cube-container {
     transform-style: preserve-3d;
     position: relative;
-    height: 300px;
-    width: 300px;
-    margin: 100px auto; }
+    background: #000;
+    height: 250px;
+    width: 250px;
+    margin: 100px auto;
+    transform: translateX(0px) translateY(0px);
+    transition: transform 5400ms linear; }
     .cube-3d .cube-container .side {
       position: absolute;
       top: 0;
@@ -138,23 +142,23 @@ h3 {
       height: 100%;
       width: 100%; }
       .cube-3d .cube-container .side.front {
-        background: #1abc9c;
-        transform: translateZ(150px); }
+        background: rgba(34, 98, 219, 0.5);
+        transform: translateZ(125px); }
       .cube-3d .cube-container .side.back {
-        background: #1abc9c;
-        transform: translateZ(-150px); }
+        background: rgba(34, 98, 219, 0.5);
+        transform: translateZ(-125px); }
       .cube-3d .cube-container .side.left {
-        background: #3498db;
-        transform: translateX(-150px) rotateY(90deg); }
+        background: rgba(34, 98, 219, 0.5);
+        transform: translateX(-125px) rotateY(90deg); }
       .cube-3d .cube-container .side.right {
-        background: #9b59b6;
-        transform: translateX(150px) rotateY(90deg); }
+        background: rgba(34, 98, 219, 0.5);
+        transform: translateX(125px) rotateY(90deg); }
       .cube-3d .cube-container .side.top {
-        background: #e74c3c;
-        transform: translateY(-150px) rotateX(90deg); }
+        background: rgba(34, 98, 219, 0.5);
+        transform: translateY(-125px) rotateX(90deg); }
       .cube-3d .cube-container .side.bottom {
-        background: #e74c3c;
-        transform: translateY(150px) rotateX(90deg); }
+        background: rgba(34, 98, 219, 0.5);
+        transform: translateY(125px) rotateX(90deg); }
   .cube-3d .btn {
     display: inline-block;
     background: #000;

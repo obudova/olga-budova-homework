@@ -3,7 +3,7 @@ $(function () {
     var deg = 0;
     var IntervalId = 0;
     var moveId = 0;
-    var action = false;
+    var active = false;
     var pixelCountX = 0;
     var pixelCountY = 0;
 
@@ -36,53 +36,45 @@ $(function () {
         }, 10);
     }
     $('.btn.start').click(function () {
-        if(!action){
+        if(!active){
         IntervalId = setInterval(function () {
             deg++;
             rotateBox(deg);
             if(deg==360){
                 deg=0;
             }
-        }, 15)
+        }, 10)
         }
-        action = true;
+        active = true;
     });
     $('.btn.pause').click(function () {
         clearInterval(IntervalId);
-        action = false;
+        active = false;
     });
     $('.btn.stop').click(function () {
         deg = 0;
         rotateBox(deg);
         clearInterval(IntervalId);
-        action = false;
+        active = false;
     });
 
     $('.btn.up').click(function () {
-       //moveOnClick(rotateUp);
-        //console.log($('.cube-container').css('transform','translateX()'));
-        var lastY = pixelCountY;
-        moveId = setInterval(function () {
-            pixelCountY--;
-            $('.cube-container').css('transform','translateY('+pixelCountY+'px)');
 
-            if(lastY-pixelCountY>=100){
-               clearInterval(moveId);
-            }
-            console.log(document.getElementById('cube-container').style('transform', 'translateX'));
 
-        })
+         //   $('.cube-container').css('transform','translateY('+100+'px)');
+
+
     });
     $('.btn.down').click(function () {
         var lastY = pixelCountY;
         moveId = setInterval(function () {
             pixelCountY++;
-            $('.cube-container').css('transform','translateY('+pixelCountY+'px)');
-
-            if(pixelCountY-lastY>=100){
+            $('.cube-container').css('transform','translateX('+pixelCountY+'px)'+'rotateX('+ deg + 'deg) ' +
+                'rotateY(' + deg + 'deg)');
+            if(pixelCountY-lastY>=150){
                 clearInterval(moveId);
             }
-        })
+        }, 15)
     });
     $('.btn.left').click(function () {
         moveOnClick(rotateLeft);

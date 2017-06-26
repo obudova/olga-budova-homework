@@ -1,13 +1,13 @@
 .cube-3d{
   perspective: 2500px;
-  //perspective-origin: -600px -1000px;
+  perspective-origin: -600px -1000px;
 
   .cube-container{
     transform-style: preserve-3d;
     position: relative;
-    //background: #000;
-    height:300px;
-    width: 300px;
+    background: #000;
+    height:250px;
+    width: 250px;
     margin:100px auto;
     .side{
       position: absolute;
@@ -16,28 +16,28 @@
       height: 100%;
       width: 100%;
       &.front{
-        background: #1abc9c;
-        transform: translateZ(150px);
+        background: rgba(34,98,219, 0.5);
+        transform: translateZ(125px);
       }
       &.back{
-        background: #1abc9c;
-        transform: translateZ(-150px);
+        background: rgba(34,98,219, 0.5);
+        transform: translateZ(-125px);
       }
       &.left{
-        background: #3498db;
-        transform: translateX(-150px) rotateY(90deg);
+        background: rgba(34,98,219, 0.5);
+        transform: translateX(-125px) rotateY(90deg);
       }
       &.right{
-        background: #9b59b6;
-        transform: translateX(150px) rotateY(90deg);
+        background: rgba(34,98,219, 0.5);
+        transform: translateX(125px) rotateY(90deg);
       }
       &.top{
-        background:  #e74c3c;
-        transform: translateY(-150px) rotateX(90deg);
+        background:  rgba(34,98,219, 0.5);
+        transform: translateY(-125px) rotateX(90deg);
       }
       &.bottom{
-        background: #e74c3c;
-        transform: translateY(150px) rotateX(90deg);
+        background: rgba(34,98,219, 0.5);
+        transform: translateY(125px) rotateX(90deg);
       }
     }
   }
@@ -50,9 +50,4 @@
     font-size: 16px;
     cursor: pointer;
   }
-}
-@keyframes moveUp {
-  0% { transform: translateZ(-150px) rotateX(0deg); }
-  100% { transform: translateZ(-150px) rotateX(90deg); }
-
 }
