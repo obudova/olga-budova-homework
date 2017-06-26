@@ -33,3 +33,39 @@ h3{
   top:0;
   left:0;
 }
+p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #000;
+}
+button{
+  cursor: pointer;
+  height: 48px;
+  border-radius: 100px;
+  border: solid 1px #e3e7ee;
+  padding:15px 30px;
+  background-color: #fff;
+  outline: none;
+  transition: all .3s ease;
+  &.btn-text{
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #40464f;
+    text-transform: uppercase;
+    }
+  &:hover{
+    background-color: #e3e7ee;
+  }
+}
+.btn{
+    display: inline-block;
+    background: #000;
+    padding: 12px 25px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }

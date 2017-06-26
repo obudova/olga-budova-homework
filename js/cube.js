@@ -1,4 +1,3 @@
-console.log($);
 $(function () {
     var deg = 0;
     var IntervalId = 0;

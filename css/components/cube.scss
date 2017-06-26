@@ -43,19 +43,11 @@ $half-side: $side-width/2;
         transform: translateY($half-side) rotateX(90deg);
       }
     }
-  }
-  .btn{
-    display: inline-block;
-    background: #000;
-    padding: 12px 25px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
+  }                                   
   nav{
     position: fixed;
     bottom: 0;
     left: 0;
+    
   }
 }
