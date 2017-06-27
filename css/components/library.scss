@@ -8,6 +8,7 @@ $sea-green: #1abc9c;
     color: #798ca7;
     padding-bottom: 20px;
     border-bottom: 1px solid #798ca7;
+    margin-top: 50px;
     margin-bottom: 50px;
     text-transform: uppercase;
   }
@@ -19,7 +20,6 @@ $sea-green: #1abc9c;
     margin-bottom: 0;
   }
 }
-
 
 .dropdown{
   position: relative;
@@ -215,5 +215,41 @@ $sea-green: #1abc9c;
       }
     }
   }
+}
 
+.tab-container{
+  width: 500px;
+  .tabs{
+    overflow: auto;
+    .tab{
+      padding: 12px 20px;
+      display: inline-block;
+      float: left;
+      border-bottom: 1px solid #ccc;
+      color: #798ca7;
+      cursor: pointer;
+      &.active{
+        color: #526071;
+        border-bottom: 1px solid $blue;
+      }
+    }
+  }
+  .tab-content{
+    margin-top: 20px;
+    position: relative;
+    .content{
+      position: absolute;
+      top: 0;
+      left:0;
+      line-height: 170%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease-out;
+      &.active{
+        position: static;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }

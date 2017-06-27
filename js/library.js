@@ -35,3 +35,10 @@ $('.with-sub-list .sub-list .list-item').click(function () {
         $(this).addClass('chosen');
     }
 });
+$('.tab-container .tabs .tab').click(function () {
+    var target = $(this).attr('data-tab');
+    $('.tab-container .tab').removeClass('active');
+    $('.tab-container .content').removeClass('active');
+    $(this).addClass('active');
+    $(target).addClass('active');
+});

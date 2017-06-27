@@ -555,6 +555,7 @@ button {
     color: #798ca7;
     padding-bottom: 20px;
     border-bottom: 1px solid #798ca7;
+    margin-top: 50px;
     margin-bottom: 50px;
     text-transform: uppercase; }
   .component-library .component-type {
@@ -702,5 +703,35 @@ button {
           top: 20px;
           left: -35px;
           border-radius: 100%; }
+
+.tab-container {
+  width: 500px; }
+  .tab-container .tabs {
+    overflow: auto; }
+    .tab-container .tabs .tab {
+      padding: 12px 20px;
+      display: inline-block;
+      float: left;
+      border-bottom: 1px solid #ccc;
+      color: #798ca7;
+      cursor: pointer; }
+      .tab-container .tabs .tab.active {
+        color: #526071;
+        border-bottom: 1px solid #42a5f5; }
+  .tab-container .tab-content {
+    margin-top: 20px;
+    position: relative; }
+    .tab-container .tab-content .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 170%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease-out; }
+      .tab-container .tab-content .content.active {
+        position: static;
+        opacity: 1;
+        visibility: visible; }
 
 /*# sourceMappingURL=style.css.map */
