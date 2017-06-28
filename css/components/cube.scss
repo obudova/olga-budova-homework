@@ -1,14 +1,17 @@
+$side-width: 250px;
+$half-side: $side-width/2;
 .cube-3d{
   perspective: 2500px;
   perspective-origin: -600px -1000px;
+  height: 100%;
 
   .cube-container{
     transform-style: preserve-3d;
     position: relative;
-    background: #000;
-    height:250px;
-    width: 250px;
-    margin:100px auto;
+    //background: #000;
+    height:$side-width;
+    width: $side-width;
+    margin:300px auto;
     .side{
       position: absolute;
       top: 0;
@@ -16,38 +19,35 @@
       height: 100%;
       width: 100%;
       &.front{
-        background: rgba(34,98,219, 0.5);
-        transform: translateZ(125px);
+        background: #1abc9c;
+        transform: translateZ($half-side);
       }
       &.back{
-        background: rgba(34,98,219, 0.5);
-        transform: translateZ(-125px);
+        background: #1abc9c;
+        transform: translateZ(-$half-side);
       }
       &.left{
-        background: rgba(34,98,219, 0.5);
-        transform: translateX(-125px) rotateY(90deg);
+        background: #3498db;
+        transform: translateX(-$half-side) rotateY(90deg);
       }
       &.right{
-        background: rgba(34,98,219, 0.5);
-        transform: translateX(125px) rotateY(90deg);
+        background: #3498db;
+        transform: translateX($half-side) rotateY(90deg);
       }
       &.top{
-        background:  rgba(34,98,219, 0.5);
-        transform: translateY(-125px) rotateX(90deg);
+        background:  #e74c3c;
+        transform: translateY(-$half-side) rotateX(90deg);
       }
       &.bottom{
-        background: rgba(34,98,219, 0.5);
-        transform: translateY(125px) rotateX(90deg);
+        background: #e74c3c;
+        transform: translateY($half-side) rotateX(90deg);
       }
     }
-  }
-  .btn{
-    display: inline-block;
-    background: #000;
-    padding: 12px 25px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+  }                                   
+  nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    
   }
 }

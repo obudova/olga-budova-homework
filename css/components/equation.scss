@@ -1,0 +1,33 @@
+.equation{
+  sup{
+    vertical-align: super;
+  }
+  h3{
+    margin-bottom: 20px;
+  }
+
+  input[type=number]{
+    width: 56px;
+    height: 38px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px #e3e7ee;
+    font-size: 16px;
+    color: #40464f;
+    text-align: center;
+
+    &[type=number]::-webkit-inner-spin-button,
+    &[type=number]::-webkit-outer-spin-button {
+        opacity: 1;
+    }
+  }
+  form{
+    margin: 0 auto;
+    width: 500px;
+    padding: 30px;
+    border: 1px solid rgba(64, 70, 79, 0.35);
+    border-radius:5px ;
+
+  }
+  
+}
