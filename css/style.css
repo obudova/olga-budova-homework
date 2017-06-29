@@ -705,9 +705,33 @@ button {
           border-radius: 100%; }
 
 .tab-container {
-  width: 500px; }
+  width: 500px;
+  display: inline-block;
+  vertical-align: top; }
+  .tab-container .tabs-variation {
+    margin-bottom: 20px; }
   .tab-container .tabs {
     overflow: auto; }
+    .tab-container .tabs.var1 .tab.active {
+      color: #526071;
+      border-bottom: 1px solid #42a5f5; }
+    .tab-container .tabs.var2 .tab.active {
+      color: #526071;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      border-radius: 3px; }
+    .tab-container .tabs.var3 .tab {
+      border: none; }
+      .tab-container .tabs.var3 .tab.active {
+        color: #526071;
+        border: none; }
+    .tab-container .tabs.var4 .tab {
+      border: none; }
+      .tab-container .tabs.var4 .tab.active {
+        color: #fff;
+        border: none;
+        background-color: #1abc9c;
+        border-radius: 3px; }
     .tab-container .tabs .tab {
       padding: 12px 20px;
       display: inline-block;
@@ -715,9 +739,6 @@ button {
       border-bottom: 1px solid #ccc;
       color: #798ca7;
       cursor: pointer; }
-      .tab-container .tabs .tab.active {
-        color: #526071;
-        border-bottom: 1px solid #42a5f5; }
   .tab-container .tab-content {
     margin-top: 20px;
     position: relative; }
@@ -881,5 +902,45 @@ button {
         .spinner__container .spinner.var6 > span:nth-child(3) {
           left: 56px;
           animation: up2 1s ease-in-out 0.66s infinite; }
+
+.slider__container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden; }
+  .slider__container .arrow {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+    .slider__container .arrow > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%; }
+    .slider__container .arrow.right {
+      right: 0; }
+      .slider__container .arrow.right > img {
+        transform: translate(-50%, -50%) rotate(-90deg); }
+    .slider__container .arrow.left {
+      left: 0; }
+      .slider__container .arrow.left > img {
+        transform: translate(-50%, -50%) rotate(90deg); }
+.slider__row {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10000px;
+  transition: all .9s ease-out; }
+  .slider__row .slide {
+    display: inline-block;
+    float: left;
+    overflow: hidden; }
+    .slider__row .slide img {
+      height: 500px;
+      width: 1200px; }
 
 /*# sourceMappingURL=style.css.map */
