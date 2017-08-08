@@ -1,0 +1,45 @@
+.slider__container{
+  .slider__row{
+
+  }
+  .nav-dots{
+    position: absolute;
+    bottom: 20px;
+    left:0;
+    right: 0;
+    text-align: center;
+    a{
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border-radius: 100%;
+      background: #fff;
+      margin-right: 5px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &.second-type{
+    .slider__row{
+      position: absolute;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      .slide{
+        position: absolute;
+        top: 0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        &.active{
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}

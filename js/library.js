@@ -49,13 +49,13 @@ $('.tab-container  .tabs .tab').click(function () {
 var sliderWidth = $('.slider__container').width();
 var count = 0;
 var distance = 0;
-var slideCount = $('.slider__container .slider__row .slide').length-1;
-$('.slider__container .slider__row').css('width', ((slideCount+1)*sliderWidth)+'px');
+var slideCount = $('.slider__container.first-type .slider__row .slide').length-1;
+$('.slider__container.first-type .slider__row').css('width', ((slideCount+1)*sliderWidth)+'px');
 function moveSlide() {
     distance=sliderWidth*count*(-1);
-    $('.slider__container .slider__row').css('transform','translate('+ distance +'px)');
+    $('.slider__container.first-type .slider__row').css('transform','translate('+ distance +'px)');
 }
-$('.arrow.right').click(function () {
+$('.first-type .arrow.right').click(function () {
     count++;
     if(count > slideCount){
         count=0;
@@ -63,10 +63,16 @@ $('.arrow.right').click(function () {
    moveSlide();
 
 });
-$('.arrow.left').click(function () {
+$('.first-type .arrow.left').click(function () {
     count--;
     if(count < 0){
         count= slideCount;
     }
     moveSlide();
+});
+$('.first-type .nav-dots a').click(function (e) {
+    e.preventDefault();
+    count = parseInt($(this).attr('data-slide')) - 1;
+    moveSlide();
+
 });
