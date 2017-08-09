@@ -1045,7 +1045,9 @@ button {
     width: 12px;
     border-radius: 100%;
     background: #fff;
-    margin-right: 5px; }
+    margin-right: 5px;
+    cursor: pointer;
+    pointer-events: auto; }
     .slider__container .nav-dots a:last-child {
       margin-right: 0; }
 .slider__container.second-type .slider__row {
@@ -1061,8 +1063,117 @@ button {
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0; }
+    opacity: 0;
+    background-size: cover;
+    background-position: center; }
     .slider__container.second-type .slider__row .slide.active {
       opacity: 1; }
+
+.input__container .input-group {
+  display: table;
+  width: 500px; }
+  .input__container .input-group .label, .input__container .input-group input, .input__container .input-group a.btn {
+    display: table-cell;
+    border: 1px solid #798ca7;
+    font-family: Muli;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1;
+    box-sizing: border-box;
+    border-right: none;
+    color: #798ca7; }
+  .input__container .input-group :last-child {
+    border-right: 1px solid #798ca7 !important; }
+  .input__container .input-group .label {
+    width: 1%; }
+  .input__container .input-group input {
+    width: 100%;
+    outline: none; }
+  .input__container .input-group a.btn {
+    width: 1%;
+    background: none #42a5f5;
+    color: #fff;
+    transition: all 2s ease-in; }
+    .input__container .input-group a.btn:hover {
+      background: linear-gradient(rgba(255, 255, 255, 0.2) 50%, transparent) #42a5f5; }
+.input__container .input-list {
+  display: inline-block; }
+  .input__container .input-list input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    outline: none;
+    vertical-align: bottom;
+    border: 1px solid #ccc;
+    box-sizing: border-box; }
+  .input__container .input-list label {
+    cursor: pointer; }
+  .input__container .input-list input[type="checkbox"]:checked {
+    background: url("../img/icons/tick.svg") center/80% no-repeat, #42a5f5; }
+  .input__container .input-list input[type="radio"] {
+    border-radius: 100%;
+    transition: all .3s ease-in; }
+    .input__container .input-list input[type="radio"]:checked {
+      border: 6px solid #1abc9c; }
+  .input__container .input-list input[type="checkbox"].special {
+    position: relative;
+    width: 32px;
+    height: 20px;
+    border-radius: 100px;
+    border: none;
+    background: #ccc;
+    transition: all .2s ease-out;
+    cursor: pointer; }
+    .input__container .input-list input[type="checkbox"].special:after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      height: 16px;
+      width: 16px;
+      border-radius: 100%;
+      background: #fff;
+      transition: all .2s ease-out; }
+    .input__container .input-list input[type="checkbox"].special:checked {
+      background: #9aca40; }
+      .input__container .input-list input[type="checkbox"].special:checked:after {
+        transform: translateX(12px); }
+  .input__container .input-list .range-container {
+    width: 100px;
+    display: inline-block;
+    position: relative; }
+    .input__container .input-list .range-container input[type="range"] {
+      width: 100%;
+      background: transparent;
+      border: none; }
+      .input__container .input-list .range-container input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 10px;
+        width: 10px;
+        background: #42a5f5;
+        border-radius: 100%;
+        margin-top: -3px;
+        cursor: pointer; }
+      .input__container .input-list .range-container input[type="range"]::-webkit-slider-runnable-track {
+        height: 3px;
+        border-radius: 100px;
+        background: #ccc; }
+      .input__container .input-list .range-container input[type="range"]:before {
+        display: inline-block;
+        content: attr(min); }
+      .input__container .input-list .range-container input[type="range"]:after {
+        display: inline-block;
+        content: attr(max); }
+    .input__container .input-list .range-container label.range-val {
+      position: absolute;
+      top: 100%;
+      left: 0; }
+    .input__container .input-list .range-container output {
+      position: absolute; }
 
 /*# sourceMappingURL=style.css.map */
