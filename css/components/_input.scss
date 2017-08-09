@@ -1,0 +1,152 @@
+.input__container{
+
+  .input-group{
+    display: table;
+    width: 500px;
+
+    .label, input, a.btn{
+      display: table-cell;
+      border: 1px solid $primary-color;
+      font-family: Muli;
+      font-size: 16px;
+      padding: 10px;
+      line-height: 1;
+      box-sizing: border-box;
+      border-right:none;
+      color: $primary-color;
+    }
+
+    :last-child{
+      border-right: 1px solid $primary-color !important;
+    }
+
+    .label{
+      width: 1%;
+    }
+
+    input{
+      width: 100%;
+      outline: none;
+    }
+
+    a.btn{
+      width: 1%;
+      background: none $blue;
+      color: #fff ;
+      transition: all 2s ease-in ;
+      &:hover{
+        background: linear-gradient(rgba(255, 255, 255, 0.2) 50%, transparent) $blue;
+      }
+    }
+
+  }
+  .input-list{
+    display: inline-block;
+    input{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 20px;
+      width: 20px;
+      background: #fff;
+      outline: none;
+      vertical-align: bottom;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    label{
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      &:checked {
+        background: url('../img/icons/tick.svg') center/ 80% no-repeat, $blue;
+      }
+    }
+      
+    input[type="radio"]{
+      border-radius: 100%;
+      transition: all .3s ease-in;
+      &:checked{
+        border: 6px solid $sea-green;
+      }
+    }
+
+    input[type="checkbox"].special{
+      position: relative;
+      width: 32px;
+      height: 20px;
+      border-radius: 100px;
+      border: none;
+      background: #ccc;
+      transition: all .2s ease-out;
+      cursor: pointer;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        height: 16px;
+        width: 16px;
+        border-radius: 100%;
+        background: #fff;
+        transition: all .2s ease-out;
+
+      }
+      &:checked{
+        background: $green;
+        &:after{
+          transform: translateX(12px);
+        }
+      }
+    }
+
+    .range-container{
+      width: 100px;
+      display: inline-block;
+      position: relative;
+
+      input[type="range"]{
+        width: 100%;
+        background: transparent;
+        border: none;
+
+        &::-webkit-slider-thumb{
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          height:10px;
+          width: 10px;
+          background: $blue;
+          border-radius: 100%;
+          margin-top: -3px;
+          cursor: pointer;
+        }
+        &::-webkit-slider-runnable-track{
+          height: 3px;
+          border-radius: 100px;
+          background: #ccc;
+        }
+        &:before{
+          display: inline-block;
+          content: attr(min);
+        }
+
+        &:after{
+          display: inline-block;
+          content: attr(max);
+        }
+      }
+
+      label.range-val{
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+      output{
+        position: absolute;
+      }
+    }
+  }
+}
