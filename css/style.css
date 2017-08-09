@@ -1033,4 +1033,36 @@ button {
 .text-entered label {
   visibility: hidden; }
 
+.slider__container .nav-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center; }
+  .slider__container .nav-dots a {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background: #fff;
+    margin-right: 5px; }
+    .slider__container .nav-dots a:last-child {
+      margin-right: 0; }
+.slider__container.second-type .slider__row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%; }
+  .slider__container.second-type .slider__row .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0; }
+    .slider__container.second-type .slider__row .slide.active {
+      opacity: 1; }
+
 /*# sourceMappingURL=style.css.map */
