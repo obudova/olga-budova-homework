@@ -1,0 +1,103 @@
+.search__container{
+  position: relative;
+  width: 0;
+  top: 0;
+  right: 48px;
+  float: right;
+  z-index: 20;
+  transition: all .3s ease;
+  button{
+    background-size: contain;
+    height: 35px;
+    width: 45px;
+    padding: 5px;
+    border-radius: 0;
+    pointer-events: auto;
+    border: none;
+    position: absolute;
+    top: 0;
+  }
+  .search-button{
+    background: url('../img/icons/search.svg') no-repeat;
+    left:-0;
+    
+  }
+  .search-close-button{
+    background: url("../img/icons/remove.svg") no-repeat;
+    background-clip: content-box;
+    background-size: 20px 20px;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    right: -48px;
+    transition: all .25s ease-out;
+  }
+  input{
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.87);
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 5px 0;
+    width: 100%;
+    text-align: left;
+    background: 0;
+    box-shadow: none;
+    color: #000;
+    outline: none;
+  }
+  label{
+    box-sizing: border-box;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0,0,0,.54);
+    left: 0px;
+    right: 0;
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 7px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    &::after{
+      background-color: rgba(0,0,0,.87);
+      bottom: 0;
+      content: '';
+      height: 2px;
+      width: 10px;
+      left: 45%;
+      position: absolute;
+      transition: .2s cubic-bezier(.4,0,.2,1);
+      visibility: hidden;
+    }
+  }
+}
+.search-active{
+  width: 300px;
+  .search-button{
+    left: -48px;
+  }
+  .search-close-button{
+    opacity: 1;
+    visibility: visible;
+  }
+  label{
+    opacity: 1;
+  }
+}
+.is-focused {
+  label::after{
+    visibility: visible;
+    left: 0;
+    width: 100%;
+  }
+}
+.text-entered{
+  label{
+    visibility: hidden;
+  }
+}

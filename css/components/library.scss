@@ -377,6 +377,7 @@ $sea-green: #1abc9c;
         top:0;
         left:0;
         animation: moveUp .75s ease-out infinite;
+        transform: translateY(90%);
       }
       &:before{
         bottom:0;
