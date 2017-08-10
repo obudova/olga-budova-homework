@@ -44,7 +44,7 @@
         <section class="component-library">
             <div class="container">
             <div class="text-container">
-                <h2>Lesson 10-14, 19</h2>
+                <h2>Lesson 10-14, 19-20</h2>
             </div>
                 <h3>01. Dropdown</h3>
                 <div class="dropdown">
@@ -281,20 +281,41 @@
                 <h3 class="component-type">Fade effect</h3>
                 <div class="slider__container second-type">
                     <div class="slider__row">
-                        <div id="s1" class="slide"><img src="img/slide5.jpeg" alt=""></div>
-                        <div id="s2" class="slide"><img src="img/slide2.jpeg" alt=""></div>
-                        <div id="s3" class="slide"><img src="img/slide3.jpeg" alt=""></div>
-                        <div id="s4" class="slide"><img src="img/slide4.jpeg" alt=""></div>
-                        <div id="s5" class="slide"><img src="img/slide1.jpg" alt=""></div>
+                        <div id="s1" class="slide active" style="background-image: url('img/slide2.jpeg')"></div>
+                        <div id="s2" class="slide" style="background-image: url('img/slide5.jpeg')"></div>
+                        <div id="s3" class="slide" style="background-image: url('img/slide1.jpg')"></div>
+                        <div id="s4" class="slide" style="background-image: url('img/slide3.jpeg')"></div>
+                        <div id="s5" class="slide" style="background-image: url('img/slide4.jpeg')"></div>
                     </div>
                     <a  class="arrow left"><img src="img/icons/down-arrow.svg" alt=""></a>
                     <a  class="arrow right"><img src="img/icons/down-arrow.svg" alt=""></a>
                     <div class="nav-dots">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
+                        <a data-slide="s1" ></a>
+                        <a data-slide="s2" ></a>
+                        <a data-slide="s3" ></a>
+                        <a data-slide="s4" ></a>
+                        <a data-slide="s5" ></a>
+                    </div>
+                </div>
+                <h3>08. Inputs & Forms</h3>
+                <div class="input__container">
+                    <div class="input-group">
+                        <span class="label"> Mail</span>
+                        <input type="text">
+                        <a href="" class="btn">Button</a>
+                    </div>
+                    <div class="input-list">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox">Checkbox</label>
+                        <input type="radio" id="radio">
+                        <label for="radio">Radio</label>
+                        <input type="checkbox" class="special" id="special">
+                        <label for="special"> Special</label>
+                        <div class="range-container">
+                            <input type="range" value="0" min="0" max="100" id="range">
+                            <output for="range"></output>
+                        </div>
+
                     </div>
                 </div>
 
@@ -376,11 +397,13 @@
         </section>
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/cube.js"></script>
     <script src="js/equation.js"></script>
     <script src="js/table-generator.js"></script>
     <script src="js/moving-box.js"></script>
     <script src="js/library.js"></script>
+
 </body>
 
 </html>

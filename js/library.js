@@ -76,3 +76,15 @@ $('.first-type .nav-dots a').click(function (e) {
     moveSlide();
 
 });
+
+$('.slider__container.second-type').sliderPlugin();
+
+$('input[type="range"]').mousemove(function () {
+    var pseudoBeforeWidth = parseInt(getComputedStyle(document.querySelector('input[type="range"]'), ':before').width);
+    var pseudoelementsWidth =  + parseInt(getComputedStyle(document.querySelector('input[type="range"]'), ':after').width);
+    console.log(pseudoelementsWidth);
+    var value = $(this).val();
+   $('output').html(value)
+       .css({'left': 'calc( ' + (value*100)/$(this).attr('max') + '% - ' + pseudoBeforeWidth + 'px)'
+   }) ;
+});
